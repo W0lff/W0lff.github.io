@@ -121,7 +121,7 @@
             			roomDiv.find('.pad-dj').text(!room.current_dj_name ? '' :room.current_dj_name);
             			roomDiv.find('.song-title').html(!isSelfHosted ? '<img class="mp-official" src="/pads/lib/img/icon.png"></img>MP Official' : '');
             			roomDiv.find('.pad-img').css({
-            					'background-image': 'url(room.pad_img)',
+            					'background-image': 'url(!room.pad_img)',
             					'background-position': 'center'
             				});
             			
