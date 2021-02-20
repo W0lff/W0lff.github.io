@@ -9,4 +9,22 @@
         "current_dj_name": "Theme Showcase",
         "pad_url": "https://wlf.glitch.me/"
     }
+    {
+        "slug": "mp",
+        "pad_name": "Musiqpad",
+        "is_self_hosted": 1,
+        "pad_owner": "Wolf",
+        "user_count": 0,
+        "current_dj_name": "Default Musiqpad instance",
+        "pad_url": "https://musiqpad.glitch.me/"
+    }
+    {
+        "slug": "add",
+        "pad_name": "Create a pad",
+        "is_self_hosted": 1,
+        "pad_owner": "Musiqpad",
+        "user_count": 0,
+        "current_dj_name": "A guide for setting up your own pad",
+        "pad_url": "http://w0lff.github.io/assets/html/guide.html"
+    }
 ]
