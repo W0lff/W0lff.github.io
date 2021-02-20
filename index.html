@@ -8,7 +8,7 @@
 <title>musiqpad | Lounge</title>
 <meta name="description" content="Real time music streaming and chat with friends. Musiqpad is a place where people can discover new music.">
 <meta name="keywords" content="discover, new, music, song, sound, youtube, stream, chat, friends, share, listen, woot, meh, plug, dj, dubtrack, fm, turntable">
-<link rel="shortcut icon" type="image/png" href="https://musiqpadmqp.github.io/pads/lib/img/icon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://w0lff.github.io/pads/lib/img/icon.png"/>
 <link href="pads/lib/css/mdi.min.css" media="all" rel="stylesheet" type="text/css"/>
 <script src="jquery-1.11.3.min.js"></script>
 <script type="text/javascript">(function(e,t){var n=e.amplitude||{};var r=t.createElement("script");r.type="text/javascript";r.async=true;r.src="libs/amplitude-2.9.0-min.gz.js";r.onload=function(){e.amplitude.runQueuedFunctions()};var s=t.getElementsByTagName("script")[0];s.parentNode.insertBefore(r,s);var i=function(){this._q=[];return this};function a(e){i.prototype[e]=function(){this._q.push([e].concat(Array.prototype.slice.call(arguments,0)));return this}}var o=["add","append","clearAll","set","setOnce","unset"];for(var c=0;c<o.length;c++){a(o[c])}n.Identify=i;n._q=[];function u(e){n[e]=function(){n._q.push([e].concat(Array.prototype.slice.call(arguments,0)));}}var l=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties"];for(var p=0;p<l.length;p++){u(l[p])}e.amplitude=n})(window,document);amplitude.init("2d3eb4a42289c22e4a7a3f7ea45718a9");amplitude.logEvent("LOUNGE_LOADED")</script>
@@ -26,7 +26,7 @@
 </div>
 </section>
 <section>
-<div class="header-content extra-info">Can't see your pad in the list? Enable send lobby stats<br>Join to our <a href="https://musiqpadmqp.github.io/discord">Discord</a></div>
+<div class="header-content extra-info">Can't see your pad in the list? Enable send lobby stats<br>Join to our <a href="https://w0lff.github.io/discord">Discord</a></div>
 </section>
 <section id="search">
 <input type="text" id="searchbox" placeholder="Search for pads...">
@@ -81,7 +81,7 @@
             			$('.welcome').html('<i>Welcome to musiqpad ' + data.version + '. Please read our <a target="_blank" href="blog_subdomain/faq/">FAQ</a></i>');
             		}
             	});
-            	$.getJSON("https://cors-anywhere.herokuapp.com/https://mqpapi.glitch.me/pad/list", function(data) {
+            	$.getJSON("https://w0lff.github.io/assets/html/list", function(data) {
             		var template = $('.pad.template');
             		template.show();
             		$('.pad:not(.template)').remove();
