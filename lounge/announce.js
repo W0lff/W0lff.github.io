@@ -1,1 +1,1 @@
-{"announcement":"We changed the algorithm for how pads are displayed in the lounge! Make sure to read the troubleshooting if you are having issues!","allowApiKeyGeneration":true,"version":"0.7.0 Beta"}
+{"announcement":"This page is manually updated with Pads. I will try to keep it updated with any rooms I know exist.","allowApiKeyGeneration":true,"version":"0.7.0 Beta"}
