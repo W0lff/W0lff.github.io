@@ -15,7 +15,7 @@
         "pad_name": "Musiqpad",
         "pad_img": "https://w0lff.github.io/pads/lib/img/mqp.png",
         "is_self_hosted": 1,
-        "pad_owner": "Wolf",
+        "pad_owner": "None",
         "user_count": 0,
         "current_dj_name": "Default Musiqpad instance",
         "pad_url": "https://musiqpad.glitch.me/"
