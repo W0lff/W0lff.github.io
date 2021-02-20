@@ -118,7 +118,7 @@
             			roomDiv.find('.pad-owner').text( (!room.pad_owner) ? (!room.api_pad_owner) ? 'Waiting for Owner' : 'Owner: ' + room.api_pad_owner : 'Owner: '+ room.pad_owner );
             			roomDiv.find('.pad-dj').text('Nobody is playing');
             			roomDiv.find('.users').text(room.user_count ? room.user_count : '0');
-            			roomDiv.find('.pad-dj').text(!room.current_dj_name ? '' : 'DJ: ' + room.current_dj_name);
+            			roomDiv.find('.pad-dj').text(!room.current_dj_name ? '' :room.current_dj_name);
             			roomDiv.find('.song-title').html(!isSelfHosted ? '<img class="mp-official" src="/pads/lib/img/icon.png"></img>MP Official' : '');
             			if (room.current_song) {
             				//$.get('https://youtube.com/get_video_info?video_id=W2H_E_BHdh8', function( data ) {
