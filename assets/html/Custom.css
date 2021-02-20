@@ -5,6 +5,9 @@
 	background-image: url('https://i.imgur.com/BievRqr.png') !important;
 	background-size: 50%;
 }
+.pad-add nav{
+	display: none;
+}
 
 .pad-wlf .pad-info {
     	background: #0d1e38;
