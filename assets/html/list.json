@@ -3,7 +3,7 @@
     {
         "slug": "wlf",
         "pad_name": "Wlf",
-        "pad_img": " ",
+        "pad_img": "https://i.imgur.com/WtQv1uR.gif",
         "is_self_hosted": 1,
         "pad_owner": "Wolf",
         "user_count": 0,
@@ -13,7 +13,7 @@
     {
         "slug": "mp",
         "pad_name": "Musiqpad",
-        "pad_img": " ",
+        "pad_img": "https://w0lff.github.io/pads/lib/img/mqp.png",
         "is_self_hosted": 1,
         "pad_owner": "Wolf",
         "user_count": 0,
