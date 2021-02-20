@@ -8,7 +8,7 @@
         "user_count": 0,
         "current_dj_name": "Theme Showcase",
         "pad_url": "https://wlf.glitch.me/"
-    }
+    },
     {
         "slug": "mp",
         "pad_name": "Musiqpad",
@@ -17,7 +17,7 @@
         "user_count": 0,
         "current_dj_name": "Default Musiqpad instance",
         "pad_url": "https://musiqpad.glitch.me/"
-    }
+    },
     {
         "slug": "add",
         "pad_name": "Create a pad",
