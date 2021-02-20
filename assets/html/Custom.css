@@ -3,6 +3,7 @@
 }
 .pad-add .pad-img{
 	background-image: url('https://i.imgur.com/BievRqr.png') !important;
+	background-size: 50%;
 }
 
 .pad-wlf .pad-info {
