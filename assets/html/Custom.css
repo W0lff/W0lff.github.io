@@ -12,9 +12,10 @@
 .pad-wlf nav:before {
    	content: " ";
    	background-image: url(https://i.imgur.com/9B7DS6y.png);
+	top: -13px;
+	left: 3px;
    	height: 15px;
    	width: 15px;
    	position: relative;
    	display: inline-table;
-   	top: -13px;
 }
