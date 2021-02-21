@@ -68,54 +68,6 @@
 </div>
 </section>
 <div class="cover"></div>
-            <script>
-                     var api_server_host = document.querySelector(".api_server_host");
-var api_room_host = document.querySelector(".api_room_host");
-var api_room_img = document.querySelector(".api_room_img");
-var api_pad_url = document.querySelector(".api_pad_url");
-var api_slug = document.querySelector(".api_slug");
-
-function sendMessage() {
-  var reqroomName = api_server_host.value;
-  var reqhostName = api_room_host.value;
-  var reqpadUrl = api_pad_url.value;
-  var reqpadSlug = api_slug.value;
-  var reqpadImg = api_room_img.value || "";
-  
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/812853280127320095/4QFbI49XQhuLpFInfcBxA2-FWZqmRAy-uZ6DX-NBWDikEPwShZFOnLlkGokfnKN9THq-");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-
-
-  
-var myEmbed = {
-  title: "host: " + reqhostName,
-  description: "```URL: " + reqpadUrl + "```" + "`Image: " + reqpadImg + "`" ,
-  color: hexToDecimal("#91c5a9"),
-  author: {
-    name: reqroomName,
-    icon_url: "https://i.imgur.com/x3u1vze.png"
-  },
-  footer: {
-    text: "slug: " + reqpadSlug
-  }
-}
-
-var params = {
-  username: "MPQ pad request",
-  embeds: [ myEmbed ]
-}
-
-// function that converts a color HEX to a valid Discord color
-function hexToDecimal(hex) {
-  return parseInt(hex.replace("#",""), 16)
-}
-
-      request.send(JSON.stringify(params));
-}   
-            </script>
 <script>
             var pads = {};
             var announcement = "";
