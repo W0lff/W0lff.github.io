@@ -453,10 +453,10 @@ p {
 }
 
 .non{
-  width: 100%;
+  width: 100% !important;
 }
 .yess{
- display: none; 
+ display: none !important; 
 }
 iframe.reqframe {
     height: 437px;
