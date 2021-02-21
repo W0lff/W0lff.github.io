@@ -1,0 +1,224 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - A Pen by W0lf</title>
+  
+  
+  
+  
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #ddd;
+    outline: none;
+    border: none;
+    list-style: none;
+    font: 16px 'Roboto',sans-serif;
+}
+.modal {
+    width: 640px;
+    background: #1C1C1F;
+    border: 1px solid #444A59;
+    margin: 0 auto;
+}
+.modal-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,10,10,0.7);
+    z-index: 89;
+    display: table;
+}
+.modal-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-box {
+    height: calc(100% - 41px);
+    width: 100%;
+    display: table;
+}
+.modal-text {
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    display: table-cell;
+    padding: 20px;
+}
+.modal-controls {
+    height: 40px;
+    width: 100%;
+    border-top: 1px solid #444A59;
+    background: #282C35;
+    display: -webkit-flex;
+    display: flex;
+}
+.modal-ctrl {
+    font-size: 16px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.modal-ctrl>div {
+    width: calc(50% - 4px);
+    display: inline-block;
+}
+.modal-no {
+    color: #C8303E;
+}
+.modal-yes {
+    color: #A7CA00;
+    cursor: pointer;
+}
+.mdi {
+    font-size: 24px;
+    vertical-align: middle;
+}
+.mdi {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+.mdi-close:before {
+    content: "\f24c";
+}
+.mdi-check:before {
+    content: "\f222";
+}
+.modal-input {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    color: #ddd;
+    outline: none;
+    border-bottom: 1px solid #444A59;
+    width: 300px;
+    height: 41px;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.modal-input:focus {
+    border-bottom: 2px solid #A77DC2;
+}
+</style>
+
+
+
+</head>
+
+<body translate="no">
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Tutorial</title>
+  
+  
+    <div class="modal-bg">
+            			<div class="modal-container">
+            				<div class="modal">
+            					<div class="modal-box">
+            						<div class="modal-text">
+            							<h3>Add your pad to the lounge</h3>
+            							<input type="text" class="modal-input api_server_host" placeholder="Room Name">
+                                                                                                <input type="text" class="modal-input api_room_host" placeholder="Name of the Host">
+                                                                                                <input type="text" class="modal-input api_room_img" placeholder="Preview image (optional)">
+                                                                                                <input type="text" class="modal-input api_slug" placeholder="Pad Slug (optional)">
+            							<input type="text" class="modal-input api_pad_url" placeholder="Pad URL">
+                          
+                          <br><br>
+                              <button onclick="sendMessage()">Send</button>
+            							<ul>
+            								<li>Preview image under 2mb. Can be animated. Use an image address.</li>
+            								<li>Pad URL is the webaddress where your pad is hosted.</li>
+            								<li>Pad slug is how the room will be identified in the html on the lounge page, so its optional.</li>
+            							</ul>
+            						</div>
+            					</div>
+            					</div>
+            				</div>
+            			</div>
+            		
+  
+
+
+      <script id="rendered-js">
+var api_server_host = document.querySelector(".api_server_host");
+var api_room_host = document.querySelector(".api_room_host");
+var api_room_img = document.querySelector(".api_room_img");
+var api_pad_url = document.querySelector(".api_pad_url");
+var api_slug = document.querySelector(".api_slug");
+
+function sendMessage() {
+  var reqroomName = api_server_host.value;
+  var reqhostName = api_room_host.value;
+  var reqpadUrl = api_pad_url.value;
+  var reqpadSlug = api_slug.value;
+  var reqpadImg = api_room_img.value || "";
+
+  var request = new XMLHttpRequest();
+  request.open("POST", "https://discord.com/api/webhooks/812853280127320095/4QFbI49XQhuLpFInfcBxA2-FWZqmRAy-uZ6DX-NBWDikEPwShZFOnLlkGokfnKN9THq-");
+
+  request.setRequestHeader('Content-type', 'application/json');
+
+
+
+
+  var myEmbed = {
+    title: "host: " + reqhostName,
+    description: "```URL: " + reqpadUrl + "```" + "`Image: " + reqpadImg + "`",
+    color: hexToDecimal("#91c5a9"),
+    author: {
+      name: reqroomName,
+      icon_url: "https://i.imgur.com/x3u1vze.png" },
+
+    footer: {
+      text: "slug: " + reqpadSlug } };
+
+
+
+  var params = {
+    username: "MPQ pad request",
+    embeds: [myEmbed] };
+
+
+  // function that converts a color HEX to a valid Discord color
+  function hexToDecimal(hex) {
+    return parseInt(hex.replace("#", ""), 16);
+  }
+
+  request.send(JSON.stringify(params));
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
