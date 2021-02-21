@@ -232,32 +232,7 @@
             	var parts = value.split("; " + name + "=");
             			if (parts.length == 2) return parts.pop().split(";").shift();
             }
-            function reqSuccess() {
-            	$('body').append('\
-            		<div class="modal-bg">\
-            			<div class="modal-container">\
-            				<div class="modal">\
-            					<div class="modal-box">\
-            						<div class="modal-text">\
-            							<h3>Success</h3>\
-            							<ul>\
-            								<li>You have now applied for your pad to be added to the lounge.</li>\
-            							</ul>\
-            						</div>\
-            					</div>\
-            					<div class="modal-controls">\
-            						<div class="modal-ctrl">\
-            							<div class="modal-no" onclick="$(\'.modal-bg\').remove()">\
-            								<div class="mdi mdi-close"></div>\
-            							</div>\
-            						
-            						</div>\
-            					</div>\
-            				</div>\
-            			</div>\
-            		</div>\
-            	');
-            }
+  
             function makeModal() {
             	$('body').append('\
             		<div class="modal-bg">\
