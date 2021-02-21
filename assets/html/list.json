@@ -1,6 +1,16 @@
 
 [
     {
+        "slug": "add",
+        "pad_name": "Create a pad",
+        "pad_img": "https://i.imgur.com/BievRqr.png",
+        "is_self_hosted": 1,
+        "pad_owner": "Musiqpad",
+        "user_count": 0,
+        "current_dj_name": "A guide for setting up your own pad",
+        "pad_url": "http://w0lff.github.io/assets/html/guide.html"
+    },
+    {
         "slug": "wlf",
         "pad_name": "Wlf",
         "pad_img": "https://i.imgur.com/WtQv1uR.gif",
@@ -19,15 +29,5 @@
         "user_count": 0,
         "current_dj_name": "Default Musiqpad instance",
         "pad_url": "https://musiqpad.glitch.me/"
-    },
-    {
-        "slug": "add",
-        "pad_name": "Create a pad",
-        "pad_img": "https://i.imgur.com/BievRqr.png",
-        "is_self_hosted": 1,
-        "pad_owner": "Musiqpad",
-        "user_count": 0,
-        "current_dj_name": "A guide for setting up your own pad",
-        "pad_url": "http://w0lff.github.io/assets/html/guide.html"
     }
 ]
