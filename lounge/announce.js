@@ -1,1 +1,1 @@
-{"announcement":"This page is manually updated with Pads. I will try to keep it updated with any rooms I know exist.","allowApiKeyGeneration":true,"version":"0.7.0 Beta"}
+{"announcement":"This page is manually updated with Pads. The Registering your pad button does not currently work yet.","allowApiKeyGeneration":true,"version":"0.7.0 Beta"}
