@@ -232,21 +232,16 @@
             	var parts = value.split("; " + name + "=");
             			if (parts.length == 2) return parts.pop().split(";").shift();
             }
-            function makeModal() {
+            function reqSuccess() {
             	$('body').append('\
             		<div class="modal-bg">\
             			<div class="modal-container">\
             				<div class="modal">\
             					<div class="modal-box">\
             						<div class="modal-text">\
-            							<h3>Register for an API Key</h3>\
-            							<input type="text" class="modal-input api_slug" placeholder="Room Slug" />\
-            							<input type="text" class="modal-input api_server_host" placeholder="Socket Host & Port (Format: domain:port)" />\
-            							<input type="text" class="modal-input api_pad_url" placeholder="Pad URL (Not required)" /><br><br>\
+            							<h3>Success</h3>\
             							<ul>\
-            								<li>Only sockets supporting SSL will work on the musiqpad frontend. If your socket does NOT support SSL then you will have to host your own frontend.</li>\
-            								<li>Pad URL is only used for Self Hosted pads that have their own frontend page.</li>\
-            								<li>If you want your pad to be hosted on musiqpad\'s frontend leave this blank.</li>\
+            								<li>You have now applied for your pad to be added to the lounge.</li>\
             							</ul>\
             						</div>\
             					</div>\
@@ -255,7 +250,40 @@
             							<div class="modal-no" onclick="$(\'.modal-bg\').remove()">\
             								<div class="mdi mdi-close"></div>\
             							</div>\
-            							<div class="modal-yes" onclick="registerApiKey()">\
+            						
+            						</div>\
+            					</div>\
+            				</div>\
+            			</div>\
+            		</div>\
+            	');
+            }
+            function makeModal() {
+            	$('body').append('\
+            		<div class="modal-bg">\
+            			<div class="modal-container">\
+            				<div class="modal">\
+            					<div class="modal-box">\
+            						<div class="modal-text">\
+            							<h3>Register for an API Key</h3>\
+            							<input type="text" class="modal-input api_server_host" placeholder="Room Name" />\
+                                                                                                <input type="text" class="modal-input api_room_host" placeholder="Name of the Host" />\
+                                                                                                <input type="text" class="modal-input api_room_img" placeholder="Preview image (optional)" />\
+                                                                                                <input type="text" class="modal-input api_slug" placeholder="Pad Slug (optional)" />\
+            							<input type="text" class="modal-input api_pad_url" placeholder="Pad URL" /><br><br>\
+            							<ul>\
+            								<li>Preview image under 2mb. Can be animated.</li>\
+            								<li>Pad URL is the webaddress where your pad is hosted.</li>\
+            								<li>Pad slug is how the room will be identified in the html on the lounge page, so its optional.</li>\
+            							</ul>\
+            						</div>\
+            					</div>\
+            					<div class="modal-controls">\
+            						<div class="modal-ctrl">\
+            							<div class="modal-no" onclick="$(\'.modal-bg\').remove()">\
+            								<div class="mdi mdi-close"></div>\
+            							</div>\
+            							<div class="modal-yes" onclick="registerPad()">\
             								<div class="mdi mdi-check"></div>\
             							</div>\
             						</div>\
