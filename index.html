@@ -246,7 +246,8 @@
                                                                                                 <input type="text" class="modal-input api_room_img" placeholder="Preview image (optional)" />\
                                                                                                 <input type="text" class="modal-input api_slug" placeholder="Pad Slug (optional)" />\
             							<input type="text" class="modal-input api_pad_url" placeholder="Pad URL" /><br><br>\
-            							<ul>\
+            							<button onclick="sendMessage()">Send</button>\
+                                                                                                <ul>\
             								<li>Preview image under 2mb. Can be animated.</li>\
             								<li>Pad URL is the webaddress where your pad is hosted.</li>\
             								<li>Pad slug is how the room will be identified in the html on the lounge page, so its optional.</li>\
@@ -258,7 +259,7 @@
             							<div class="modal-no" onclick="$(\'.modal-bg\').remove()">\
             								<div class="mdi mdi-close"></div>\
             							</div>\
-                                                                                                <div class="modal-yes" onclick="sendMessage()">\
+                                                                                                <div class="modal-yes">\
             								<div class="mdi mdi-check"></div>\
             							</div>\
             						</div>\
